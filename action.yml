@@ -1,0 +1,13 @@
+name: 'Deploy Bundle'
+description: 'Deploys a tar bundle to onprem servers'
+inputs:
+  environment:  # id of input
+    description: 'Environment to deploy to'
+    required: true
+    default: 'dev'
+outputs:
+  status: # id of output
+    description: 'If the deployment was a success or failure'
+runs:
+  using: 'node16'
+  main: 'index.js'
